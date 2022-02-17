@@ -1,2 +1,10 @@
-<h1>Books　詳細画面</h1>
+<h1>Books detail</h1>
+<%= image_tag 'no_image.jpeg' %>
+<%= link_to @book.user.name, user_path(@user.id) %>
 
+  <p><%= link_to @book.title, book_path(@book.id) %></p>
+
+  <p><%= @book.body %></p>
+
+  <%= link_to 'Edit', edit_book_path(@book.id) %>
+  <%= link_to 'Destroy',destroy_book_path(@book.id), method: :delete, data: { confirm: '本当に消しますか?'} %>

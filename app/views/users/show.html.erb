@@ -14,3 +14,13 @@
 <%= f.text_area :body %>
 <%= f.submit 'Create Book' %>
 <% end %>
+
+<h1>Books</h1>
+<p>Title</p>
+<p>Body</p>
+
+<% @books.each do |book| %>
+<p><%= book.title %></p>
+<p><%= book.body %></p>
+
+<% end %>
