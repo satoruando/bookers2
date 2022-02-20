@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    before_action :authenticate_user!, except: [:show, :index]
     @user = User.find(params[:id])
   end
 

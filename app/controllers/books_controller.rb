@@ -25,6 +25,7 @@ class BooksController < ApplicationController
   end
 
   def edit
+    before_action :authenticate_user!, except: [:show, :index]
     @book = Book.find(params[:id])
   end
 
