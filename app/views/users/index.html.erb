@@ -1,4 +1,4 @@
-<%#= render 'users/userinfo', users: @user %>
+<%= render 'users/userinfo', user: @user, book: @newbook %>
 
 <div class="col-md-8 offset-md-1">
   <h1>Users</h1>
@@ -12,9 +12,8 @@
     </thead>
     <tbody>
       <% @users.each do |user| %>
-      <%= image_tag 'no_image.jpeg' %>
       <td>
-        <%= user.image %>
+        <%= image_tag user.get_profile_image %>
       </td>
       <td>
         <%= user.name %>

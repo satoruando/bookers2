@@ -1,4 +1,4 @@
-
+<%= render 'users/userinfo', user: @user, book: @newbook %>
 
 <div class="col-md-8 offset-md-1">
   <h1>Books detail</h1>
@@ -16,10 +16,10 @@
           <%= @book.body %>
         </td>
         <td>
-          <%= link_to 'Edit', edit_book_path(@book.id) %>
+          <%= link_to 'Edit', edit_book_path(@book.id),  class:"btn btn-success" %>
         </td>
         <td>
-          <%= link_to 'Destroy',destroy_book_path(@book.id), method: :delete, data: { confirm: '本当に消しますか?'} %>
+          <%= link_to 'Destroy',destroy_book_path(@book.id), method: :delete, data: { confirm: '本当に消しますか?'}, class:"btn btn-danger" %>
         </td>
       </tr>
     </tbody>
