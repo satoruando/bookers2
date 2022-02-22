@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!
   def create
     @newbook = Book.new(book_params)
     @newbook.user_id = current_user.id
